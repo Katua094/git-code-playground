@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Shop App</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+        }
+        .container {
+            max-width: 800px;
+            margin: 50px auto;
+            background: #fff;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            border-radius: 8px;
+        }
+        h1 {
+            text-align: center;
+        }
+        .book-form {
+            display: flex;
+            gap: 10px;
+        }
+        .book-form input {
+            flex: 1;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        .book-form button {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .book-form button:hover {
+            background-color: #0056b3;
+        }
+        .book-list {
+            margin-top: 20px;
+        }
+        .book-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+            border: 1px solid #ddd;
+            margin-bottom: 10px;
+            border-radius: 4px;
+        }
+        .book-item button {
+            background-color: #dc3545;
+            color: #fff;
+            border: none;
+            padding: 5px 10px;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .book-item button:hover {
+            background-color: #a71d2a;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Book Shop</h1>
+        <form class="book-form" id="bookForm">
+            <input type="text" id="bookName" placeholder="Enter book name" required>
+            <input type="text" id="bookAuthor" placeholder="Enter author name" required>
+            <button type="submit">Add Book</button>
+        </form>
+        <div class="book-list" id="bookList"></div>
+    </div>
+
+    <script>
+        const bookForm = document.getElementById('bookForm');
+        const bookList = document.getElementById('bookList');
+
+        bookForm.addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            const bookName = document.getElementById('bookName').value;
+            const bookAuthor = document.getElementById('bookAuthor').value;
+
+            if (bookName && bookAuthor) {
+                addBook(bookName, bookAuthor);
+                bookForm.reset();
+            }
+        });
+
+        function addBook(name, author) {
+            const bookItem = document.createElement('div');
+            bookItem.className = 'book-item';
+
+            bookItem.innerHTML = `
+                <span><strong>${name}</strong> by ${author}</span>
+                <button onclick="removeBook(this)">Remove</button>
+            `;
+
+            bookList.appendChild(bookItem);
+        }
+
+        function removeBook(button) {
+            const bookItem = button.parentElement;
+            bookList.removeChild(bookItem);
+        }
+    </script>
+</body>
+</html>
