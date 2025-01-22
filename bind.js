@@ -1,5 +1,5 @@
 // Basic bookshop functionality in JavaScript
-///////////////////////////////////////
+////////////////////////////////////
 // Sample book dataa/////////////////////////
 const books = [
     { id: 1, title: 'The Great Gatsby', author: 'F. Scott Fitzgerald', price: 10.99 },
