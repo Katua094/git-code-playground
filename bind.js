@@ -7,10 +7,10 @@ const books = [
     { id: 3, title: 'To Kill a Mockingbird', author: 'Harper Lee', price: 12.99 },
 ];
 
-// Cart to hold books ///////////////////////////
+// Cart to hold books ////////////////////
 let cart = [];
 
-// Display available books/////////////////////////////
+// Display available books///////////////////
 function displayBooks() {
     console.log('Available Books:');
     books.forEach((book) => {
