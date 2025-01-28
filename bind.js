@@ -1,4 +1,4 @@
-// Basic bookshop functionality in JavaScrip./
+// Basic bookshop functionality in JavaScrip.
 // Sample book data code
 const books = [
     { id: 1, title: 'The Great Gatsby', author: 'F. Scott Fitzgerald', price: 10.99 },
