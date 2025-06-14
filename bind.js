@@ -1,4 +1,4 @@
-// Basic bookshop functionality in JavaScript///
+// Basic bookshop functionality in JavaScript//
 
 // Sample book data code///
 const books = [
