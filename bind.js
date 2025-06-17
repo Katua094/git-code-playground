@@ -2,7 +2,7 @@
 const books = [ 
     { id: 1, title: 'The Great Gatsby', author: 'F. Scott Fitzgerald', price: 10.99 },
     { id: 2, title: '1984', author: 'George Orwell', price: 8.99 },
-    { id: 3, title: 'To Kill a Mockingbird', author: 'Harper Lee', price: 12.99 },
+    { id: 3, title: 'To Kill a Mockingbird', author: 'Harper Lee', price: 12.99 }, 
 ];
 
 // Cart to hold book
