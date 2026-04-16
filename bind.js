@@ -8,7 +8,7 @@ const books = [
 // Cart to hold book//////
 let cart = [];
 
-// Display available books/
+// Display available books/////
 function displayBooks() {
     console.log('Available Books:');
     books.forEach((book) => {
